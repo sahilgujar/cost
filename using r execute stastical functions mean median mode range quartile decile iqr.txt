@@ -1,0 +1,55 @@
+Practical 3:
+Q) Using R execute the Statistical functions: Mean, Median, Mode, Range, Quartile, Inter Quartile range.
+
+1) mean, median, mode
+
+code =
+
+x<-c(12,7,3,4,2,18,3,12,-21,8,-8,12,32)
+result.mean<-mean(x)
+print(result.mean)
+
+result.median<-median(x)
+print(result.median)
+
+getmode<-function(x){
+  uniq<-unique(x)
+  uniq[which.max(tabulate(match(x,uniq)))]
+}
+  result<-getmode(x)
+  print(result)
+
+
+2) quartiles
+
+x<-c(13,19,23,31,45,46,47,51,53)
+#1st quartile
+q1<-quantile(x,0.25)
+print(q1)
+
+#2nd quartile
+q2<-quantile(x,0.50)
+print(q2)
+
+#3rd qartile
+q3<-quantile(x,0.75)
+print(q3)
+
+#4th quartile
+q4<-quantile(x,1.00)
+print(q4)
+
+quartile and decile method2
+
+y<-c(69,70,75,66,63,88,63,61,68,73,57,52,58,77)
+#quartiles
+
+quantile(y,probs=seq(0,1,length=6),type=7)
+
+#deciles
+
+quantile(y,probs=seq(0,1,length=11),type=5)
+
+4)interquartile range
+x<-c(13,19,23,31,45,47,51,53)
+IQR(x)

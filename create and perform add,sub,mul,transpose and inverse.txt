@@ -1,0 +1,69 @@
+Practical 2:= Create a Matrix using R and Perform the operations addition, inverse, transpose and multiplication operations.
+Solution:=
+
+1)matrix compulations(addition, subtraction, multiplication))
+
+code = 
+
+x<-matrix(c(1:9),nrow=3,ncol=3,byrow=TRUE)
+y<-matrix(c(10:18),nrow=3,ncol=3,byrow=TRUE)
+
+# To display
+
+print(x)
+print(y)
+
+# To ADD
+
+print(x+y)
+
+# To SUB
+
+print(x-y)
+
+
+2)creating arrays and naming rows ,columns and arrays.
+
+#creating array matrix
+
+code =
+
+v<-c(1,3,5)
+y<-c(11,23,44,24,66,45)
+z<-array(c(v,y),dim=c(3,2,2))
+print(z)
+
+#naming rows, columns and arrays
+
+v<-c(1,2,3)
+y<-c(10,11,12,13,14,15)
+colum.names<-c("col1","col2","col3")
+row.names<-c("row1","row2","row3")
+matrix.names<-c("fybscit","sybscit")
+z<-array(c(v,y),dim=c(3,3,2),dimnames=list(row.names,colum.names,matrix.names))
+
+3)matrices transpose, determinant, inverse and multiplication
+
+a<-matrix(c(2,5,1,3),nrow=2,ncol=2,byrow=TRUE)
+
+print(a)
+
+#Transpose
+
+t(a)
+
+#determinant
+
+det(a)
+
+#inverse
+
+solve(a)
+
+#To verify inverse
+
+a%*%solve(a)
+
+b<-matrix(c(2,5,1,3),nrow=2,ncol=2,byrow=TRUE)
+
+a%*%b

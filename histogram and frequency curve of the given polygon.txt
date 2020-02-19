@@ -1,0 +1,31 @@
+Practical 8:
+1. Draw histogram and frequency curve of the given polygon.
+Life of tyres in ‘000kms
+15-20
+20-25
+25-30
+30-35
+35-40
+40-45
+45-50
+No. of tyres
+5
+8
+13
+20
+14
+6
+4
+Code: 
+x<-seq(17.5,48.5,5);w=5 
+ f<-c(5,8,13,20,14,6,4)
+lb=x-w/2;ub=x+w/2; 
+#lb=lower boundry; ub=upper boundry
+ breaks=c(lb[1],ub) 
+ y=rep(x,f) # Replicate Elements of Vectors and Lists: “rep” replicates the values in
+ hist(y)
+Output:
+ 
+#To colours of the bars. 
+hist(y,breaks,col="red",border="Yellow",xlab="Life of tyres",ylab="Number of tyres", main="histogram")
+Output:

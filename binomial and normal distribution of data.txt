@@ -1,0 +1,102 @@
+Practical 7:
+Q) Using R perform Binomial and Normal distribution on the data.
+•	Functions to generate NORMAL distribution:
+1.	dnorm(x,mean,sd)
+2.	pnorm(x,mean,sd)
+3.	qnorm(p,mean,sd)
+4.	rnorm(n,mean,sd)
+       x=vector of numbers.
+      p=vector of probability.
+      n=number of observations.
+      mean=mean value. Default=0.
+      sd=standard deviation. Default=1.
+•	Functions to generate BINOMIAL distribution:
+1.	dbinorm(x,size,prob)
+2.	pbinorm(x,size,prob)
+3.	qbinorm(p,size,prob)
+4.	rbinorm(n,size,prob)
+       x=vector of numbers.
+      p=vector of probability.
+      n=number of observations.
+  size=number of trials.
+prob=probability of success of each trial.
+
+
+1)Normal Distribution
+a) dnorm()
+
+Code:
+a<-seq(-5,5,by=0.2)
+ #chose mean as 1.5 and std as 0.5
+ b<-dnorm(a,mean=1.5,sd=0.5)
+png(file="Dnorm.png")
+plot(a,b)
+dev.off() 
+plot(a,b)
+
+Output: 
+b) pnorm()
+
+
+Code:
+a<-seq(-5,5,by=0.2)
+png(file="Pnorm.png")
+plot(a,b)
+dev.off()
+plot(a,b)
+
+Ouput:
+ 
+c)qnorm()
+
+Code:
+a<-seq(0,1,by=0.01)
+ b<-qnorm(a,mean=2,sd=1)
+plot(a,b)
+
+
+Output:
+ 
+d)rnorm()
+
+Code:
+a<-rnorm(50)
+png(file="Rnorm.png")
+hist(a,main="Normal Distribution")
+dev.off()
+hist(a,main="Normal Distribution")
+
+Output:
+ 
+2)Binomial Distribution
+
+a)dbinom()
+
+Code:
+a<-seq(1,30,by=2)
+ b<-dbinom(a,30,0.5)
+png(file="Dbinom.png")
+plot(a,b)
+dev.off()
+plot(a,b)
+
+
+Output:
+ 
+b)pbiom()
+Code:
+a<-pbinom(12,34,0.4)
+print(a)
+#output = [1] 0.354171
+
+b)binom()
+Code:
+a<-qbinom(0.12,34,1/4)
+print(a)
+#output = [1] 6
+
+c)rbniom()
+Code:
+a<-rbinom(5,30,0.4)
+print(a)
+# output = [1] 10  7  9 17  9

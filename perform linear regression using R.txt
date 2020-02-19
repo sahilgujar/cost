@@ -1,0 +1,50 @@
+Practical 9:
+Q) Perform the Linear Regression using R.
+•	When with the help of mathematical tools we try to define the relationship between bivariate data is called as regression.
+•	There are two types of regression:
+ 1) linear regression.
+2)	Parabola regression.
+Code:
+1)y on x
+x<-c(151,174,138,186,128,136,179,163,152,131)
+y<-c(63,81,56,91,47,57,76,72,62,48)
+#Applythelm()function
+relation<-lm(y~x)
+print(relation)
+
+Output:
+Call:
+lm(formula = y ~ x)
+
+Coefficients:
+(Intercept)            x  
+   -38.4551       0.6746  
+
+2)x on y
+x<-c(151,174,138,186,128,136,179,163,152,131)
+y<-c(63,81,56,91,47,57,76,72,62,48)
+#Applythelm()function
+relation1<-lm(x~y)
+print(relation1)
+
+
+Output:
+Call:
+lm(formula = x ~ y)
+
+Coefficients:
+(Intercept)            y  
+61.380	     1.415 
+
+
+Predict () function
+Code:
+x<-c(151,174,138,186,128,136,179,163,152,131)
+y<-c(63,81,56,91,47,57,76,72,62,48)
+relation<-lm(y~x)
+a<-data.frame(x=170)
+result<-predict(relation,a)
+print(result)
+
+output:
+76.22869

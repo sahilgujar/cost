@@ -1,0 +1,29 @@
+Practical 1:= Using R execute the basic commands, array, list and frames.
+Solution:=
+
+Basic commands:=
+Code:=
+my.var="hi here i am performing COST practicals"
+print(my.var)
+
+Array:=
+Code:=
+p<-c(1,2,3,34,54)
+q<-c(12,23,43,78,54,123)
+myarr<-array(c(p,q),dim=c(3,3,2))
+print(myarr)
+
+List:=
+Code:=
+list1<-list(c(1,2,3),12.3,"Ram",234,sin)
+print(list1)
+
+Frames:=
+Code:=
+BMI<-data.frame(gender=c("female","female","male","female"),
++ height=c(152,155,165.2,170.0),
++ weight=c(35,40,60,55),
++ age=c(14,16,20,17)
++ )
+>print(BMI)
+

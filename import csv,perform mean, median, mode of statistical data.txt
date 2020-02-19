@@ -1,0 +1,50 @@
+Practical 4:
+Q) Using R import the data from Excel/CSV file and perform mean,median,mode of statistical data.
+•	Data frame= is a table or 2D array like structure in which each column contains value of one variable and each row contains one set of values of each column.
+Code:To indentify current working directory
+>getwd()
+[1] "F:/R-prac"
+ #To set new directory
+>setwd("F:/R@prac")
+
+#To Read .csv file
+>d<-read.csv("data.csv")
+>print(d)
+
+Output:
+Data is:
+
+#open a text file and put "
+x
+1
+2
+3
+4
+5
+6
+7
+8
+9
+"
+then save it with .csv extension
+
+1)Mean
+#To find "Mean" form the .csv file
+>mean(d$X)
+
+Output:
+[1] 5
+
+2)Median
+#To find "Median" form the .csv file
+>median(d$X)
+
+Output:
+[1] 5
+
+3)Mode
+#To find "Mode" form the .csv file
+>mode(d$X)
+
+Output:
+[1] "numeric"
